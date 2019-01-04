@@ -3,31 +3,26 @@
 
 
 ## QuickStart
-
-<!-- add docs here for user -->
-
-see [egg docs][egg] for more detail.
-
-### Development
++ 进入项目目录，执行
 
 ```bash
-$ npm i
-$ npm run dev
-$ open http://localhost:7001/
+npm install
+// or
+yarn
 ```
 
-### Deploy
++ 执行，此时为利用webapck打包源代码
 
 ```bash
-$ npm start
-$ npm stop
+npm run startServer
+// or
+yarn startServer
 ```
 
-### npm scripts
++ 运行服务端代码
 
-- Use `npm run lint` to check code style.
-- Use `npm test` to run unit test.
-- Use `npm run autod` to auto detect dependencies upgrade, see [autod](https://www.npmjs.com/package/autod) for more detail.
-
-
-[egg]: https://eggjs.org
+```bash
+npm run dev
+// or
+yarn dev
+```
