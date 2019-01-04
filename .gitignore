@@ -14,3 +14,4 @@ app/public/
 .DS_Store
 *.sw*
 *.un~
+.autod.conf.js
