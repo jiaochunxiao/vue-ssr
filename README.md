@@ -1,6 +1,6 @@
 # vue-ssr
 
-
+此demo为Vue SSR的简单使用示例
 
 ## QuickStart
 + 进入项目目录，执行
