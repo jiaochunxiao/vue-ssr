@@ -1,6 +1,8 @@
 'use strict';
-const createApp = require('./app.js');
+const { createApp } = require('./app.js');
+const { app, router } = createApp();
 
-const app = createApp();
-console.log(app);
-app.$mount('#app');
+router.onReady(() => {
+    app.$mount('#app');
+});
+

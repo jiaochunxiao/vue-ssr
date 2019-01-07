@@ -1,9 +1,9 @@
 'use strict';
 const path = require('path');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
-console.log(__dirname);
+// const VueSSRClientPlugin = require('vue-server-renderer/client-plugin')
 module.exports = {
-    mode: 'production',
+    mode: 'development',
     resolve: {
         alias: {
             vue: 'vue/dist/vue.js',
@@ -28,5 +28,6 @@ module.exports = {
     },
     plugins: [
         new VueLoaderPlugin(),
+        // new VueSSRClientPlugin(),
     ],
 };

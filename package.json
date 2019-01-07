@@ -7,6 +7,7 @@
     "egg": "^2.2.1",
     "egg-scripts": "^2.5.0",
     "vue": "^2.5.21",
+    "vue-router": "^3.0.2",
     "vue-server-renderer": "^2.5.21",
     "webpack": "^4.28.3"
   },
@@ -22,6 +23,7 @@
     "eslint-config-egg": "^6.0.0",
     "html-webpack-plugin": "^3.2.0",
     "vue-loader": "^15.4.2",
+    "vue-ssr-webpack-plugin": "^3.0.0",
     "vue-template-compiler": "^2.5.21",
     "webpack-cli": "^3.2.0",
     "webpack-merge": "^4.1.5",
@@ -32,6 +34,7 @@
   },
   "scripts": {
     "startServer": "webpack --config app/src/webpack.client.conf.js && webpack --config app/src/webpack.server.conf.js",
+    "webpackServer": "webpack --config app/src/webpack.server.conf.js",
     "start": "egg-scripts start --daemon --title=egg-server-vue-ssr",
     "stop": "egg-scripts stop --title=egg-server-vue-ssr",
     "dev": "egg-bin dev",

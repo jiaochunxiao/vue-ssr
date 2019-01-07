@@ -3,6 +3,8 @@
 const merge = require('webpack-merge');
 const base = require('./webpack.base.conf');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+// const VueSSRPlugin = require('vue-ssr-webpack-plugin');
+const VueSSRServerPlugin = require('vue-server-renderer/server-plugin');
 
 module.exports = merge(base, {
     target: 'node',
@@ -21,5 +23,7 @@ module.exports = merge(base, {
             },
             excludeChunks: [ 'server' ],
         }),
+        // new VueSSRPlugin(),
+        new VueSSRServerPlugin(),
     ],
 });

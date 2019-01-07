@@ -3,7 +3,7 @@
 const merge = require('webpack-merge');
 const base = require('./webpack.base.conf');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-// const VueSSRClientPlugin = require('vue-server-renderer/client-plugin')
+const VueSSRClientPlugin = require('vue-server-renderer/client-plugin');
 
 module.exports = merge(base, {
     entry: {
@@ -13,7 +13,7 @@ module.exports = merge(base, {
         // new webpack.optimize.CommonsChunkPlugin({
         //     name: 'manifest',
         // }),
-        // new VueSSRClientPlugin(),
+        new VueSSRClientPlugin(),
         new HtmlWebpackPlugin({
             template: './app/src/index.html',
             filename: 'index.html',
