@@ -9,6 +9,7 @@
     "vue": "^2.5.21",
     "vue-router": "^3.0.2",
     "vue-server-renderer": "^2.5.21",
+    "vuex": "^3.0.1",
     "webpack": "^4.28.3"
   },
   "devDependencies": {
@@ -16,6 +17,7 @@
     "autod-egg": "^1.0.0",
     "babel-core": "^6.26.3",
     "babel-loader": "7",
+    "babel-plugin-transform-runtime": "^6.23.0",
     "egg-bin": "^4.3.5",
     "egg-ci": "^1.8.0",
     "egg-mock": "^3.14.0",
@@ -25,6 +27,7 @@
     "vue-loader": "^15.4.2",
     "vue-ssr-webpack-plugin": "^3.0.0",
     "vue-template-compiler": "^2.5.21",
+    "vuex-router-sync": "^5.0.0",
     "webpack-cli": "^3.2.0",
     "webpack-merge": "^4.1.5",
     "webstorm-disable-index": "^1.2.0"
