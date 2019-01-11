@@ -9,10 +9,10 @@ import { createRouter } from './router';
 import store from './store';
 import { sync } from 'vuex-router-sync';
 
-export function createApp() {
+export function createApp(ssrContext) {
     // 创建router实例
     const router = createRouter();
-
+    sync(store, router);
     const app = new Vue({
         // 注入 router 到 根 Vue实例
         router,

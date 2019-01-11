@@ -28,12 +28,13 @@ class HomeController extends Controller {
                 console.log(err);
                 if (err.code === 404) {
                     ctx.status = 404;
+                    return;
                 }
                 ctx.status = 500;
+                return;
             }
             ctx.body = html;
         });
-
     }
     async web() {
         const { ctx } = this;
