@@ -11,7 +11,7 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, '../public'),
-        publicPath: 'http://localhost:7002/public/',
+        publicPath: '/public/',
         filename: '[name].js',
     },
     module: {
