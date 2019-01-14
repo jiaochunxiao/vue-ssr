@@ -2,8 +2,7 @@
 
 const merge = require('webpack-merge');
 const base = require('./webpack.base.conf');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-// const VueSSRPlugin = require('vue-ssr-webpack-plugin');
+// const HtmlWebpackPlugin = require('html-webpack-plugin');
 const VueSSRServerPlugin = require('vue-server-renderer/server-plugin');
 
 module.exports = merge(base, {
@@ -15,15 +14,6 @@ module.exports = merge(base, {
         libraryTarget: 'commonjs2',
     },
     plugins: [
-        new HtmlWebpackPlugin({
-            template: './app/src/index.ssr.html',
-            filename: 'index.ssr.html',
-            files: {
-                js: '/public/client.js',
-            },
-            excludeChunks: [ 'server' ],
-        }),
-        // new VueSSRPlugin(),
         new VueSSRServerPlugin(),
     ],
 });

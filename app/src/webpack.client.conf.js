@@ -10,13 +10,10 @@ module.exports = merge(base, {
         client: './app/src/entry-client.js',
     },
     plugins: [
-        // new webpack.optimize.CommonsChunkPlugin({
-        //     name: 'manifest',
-        // }),
-        new VueSSRClientPlugin(),
         new HtmlWebpackPlugin({
             template: './app/src/index.html',
             filename: 'index.html',
         }),
+        new VueSSRClientPlugin(),
     ],
 });

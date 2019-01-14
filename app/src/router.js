@@ -10,11 +10,11 @@ export function createRouter() {
         routes: [
             {
                 path: '/',
-                component: () => System.import('./views/home.vue'),
+                component: () => import('./views/home.vue'),
             },
             {
                 path: '/about',
-                component: () => System.import('./views/about.vue'),
+                component: () => import('./views/about.vue'),
             }
         ]
     });

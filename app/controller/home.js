@@ -24,8 +24,9 @@ class HomeController extends Controller {
         };
         // return new Promise((resolve, reject) => {
         renderer.renderToString(context, (err, html) => {
+            // console.log(html);
             if (err) {
-                console.log(err);
+                // console.log(err);
                 if (err.code === 404) {
                     ctx.status = 404;
                     return;
@@ -42,7 +43,7 @@ class HomeController extends Controller {
     }
     async about() {
         const { ctx } = this;
-        console.log('about');
+        // console.log('about');
         const context = {
             url: ctx.request.url,
             title: 'Vue SSR',
@@ -50,11 +51,12 @@ class HomeController extends Controller {
         };
         renderer.renderToString(context, (err, html) => {
             if (err) {
-                console.log(err);
+                // console.log(err);
                 if (err.code === 404) {
                     ctx.status = 404;
                 }
                 ctx.status = 500;
+                return;
             }
             ctx.body = html;
         });
