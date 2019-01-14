@@ -7,6 +7,7 @@ const App = require('./ App.vue').default;
 
 import { createRouter } from './router';
 import store from './store';
+// 用于同步vue-router current $route 作为 vuex store的一部分。
 import { sync } from 'vuex-router-sync';
 
 export function createApp(ssrContext) {
